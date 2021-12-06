@@ -15,4 +15,4 @@ add code block here
 * bullet
   * bullet
 
-![picture alt](table.png "Title is optional")
+![picture alt](table.PNG "Title is optional")
