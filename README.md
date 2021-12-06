@@ -10,8 +10,8 @@ Prior knowledge of HTML, CSS, and Deluge will be helpful. For this example, we w
 You will need to have set up:
 
 * A Zoho Creator form with the following:
- * a note field
- * an Account ID field
+  * a note field
+  * an Account ID field
 * CRM oauth connection
 
 
