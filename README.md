@@ -2,8 +2,8 @@
 
 ## Heading 2
 
-'''
+```
 
 add code block here
 
-'''
+```
