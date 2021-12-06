@@ -14,5 +14,5 @@ add code block here
 * bullet
 * bullet
   * bullet
-
+<img src="table.PNG" width="300">
 ![picture alt](table.PNG | width=300 "Title is optional")
