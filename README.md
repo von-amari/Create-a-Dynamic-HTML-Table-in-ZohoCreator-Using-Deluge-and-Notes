@@ -15,3 +15,4 @@ add code block here
 * bullet
   * bullet
 
+![picture alt](http://via.placeholder.com/200x150 "Title is optional")
