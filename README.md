@@ -7,12 +7,17 @@ An HTML table can be a helpful way to show an external user who does not have ac
 
 ## Set Up
 Prior knowledge of HTML, CSS, and Deluge will be helpful. For this example, we will use the Accounts and Contacts modules, but any modules could be used. 
-You will need to have set up:
+We will set up the following:
 
-* A Zoho Creator form with the following:
+* A Zoho Creator form with:
   * a note field
   * an Account ID field
-* CRM oauth connection
+* User input workflow to initalize the table
+
+You will need to have in place:
+
+* CRM oauth connection in Creator
+
 
 
 
