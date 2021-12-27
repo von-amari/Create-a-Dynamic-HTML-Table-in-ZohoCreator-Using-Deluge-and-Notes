@@ -20,7 +20,7 @@ Next, set up a workflow on User Input of Account ID. Let's begin with an if stat
 
 
 ```
-if(input.Account_ID != null)
+if(input.ACCOUNT_ID_VARIABLE != null)
 {
 
 }
@@ -30,13 +30,13 @@ if(input.Account_ID != null)
 Inside of this if statement, let's start adding the styling in a head tag and store this in an x variable. This could be named anything. :
 
 ```
-if(input.Account_ID != null)
+if(input.ACCOUNT_ID_VARIABLE != null)
 {
 	//if you want to style the whole table at once, start with this and append the start of the table to this first x
 	//
 	x = "<head><style> td { text-align: center;  padding: 12px 15px; }th {background: #313949; color:#CAC7C3; text-align:center; padding: 7px 5px;}button{color:white; padding: 8px 7px; border-radius: 5px}.edit{background-color: #313949;}.delete{background-color:red }table{width: 100%; margin: 0 auto; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); border-collapse: collapse; background-color: white;} tbody tr:nth-of-type(even){background-color:#f3f3f3;} tbody tr{border-bottom: 1px solid #dddddd;} tbody tr.active-row{font-weight: bold;color: #009879;}.edit a{color:white}</style></head>";
 	...
-}
+
 ```
 
 Note: Inline styling can be used.
@@ -56,6 +56,7 @@ Append your table and table header tags.
 Store the related contacts into a list, then iterate through the list with a for each loop. I have omitted the null and empty checks for brevety, but you may want to add these in case you do not have complete data coming from your CRM.
 
 ```
+...
 //iterate through all contacts in hh
 	getRelatedContacts = zoho.crm.getRelatedRecords("Contacts","Accounts",input.Account_ID);
 	for each  contact in getRelatedContacts
@@ -68,21 +69,22 @@ Store the related contacts into a list, then iterate through the list with a for
 		//
 		//adds the name, phone and email. to the table row. append the x variable so it's storing it each time. Click delete will delete record, edit will naviate to crm to make changes, email will open email client. 
 		//
-		x = x + "<tr><td><button class='delete'><a href='YOUR_DELETION_FORM_CONFIRMATION_URL?Account_ID=" + input.Account_ID + "&Contact_ID=" + contact.get("id") + "'>Delete</a></button></td><td><button class='edit'><a href='YOUR_EDIT_CONTACT_FORM?Account_ID=" +input.Account_ID + "&Contact_ID=" + contact.get("id") + "'>Edit</a></button></td><td>" + getFName + " " + getLName + "</a></td><td>" + ph + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+		x = x + "<tr><td><button class='delete'><a href='YOUR_DELETION_FORM_CONFIRMATION_URL?Account_ID=" + input.Account_ID + "&Contact_ID=" + contact.get("id") + "'>Delete</a></button></td><td><button class='edit'><a href='YOUR_EDIT_CONTACT_FORM_URL?Account_ID=" +input.Account_ID + "&Contact_ID=" + contact.get("id") + "'>Edit</a></button></td><td>" + getFName + " " + getLName + "</a></td><td>" + ph + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
 	}
-	...
+...
 
 ```
-
+Append the closing table tags and 
 
 ```
+...
 //close the table tags
 	x = x + "</tbody></table>";
 	//make the notes =  to x where we have been storing the table 
 	//input.plain = x;
 	//this is the blank note I created
-	input.plain1 = x;
-	show plain1;
+	input.YOUR_NOTE_VARIABLE= x;
+	show YOUR_NOTE_VARIABLE;
 }
 //end of the if statement if Account_ID == null
 ```
