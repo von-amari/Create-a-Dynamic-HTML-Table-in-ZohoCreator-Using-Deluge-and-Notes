@@ -27,12 +27,12 @@ if(input.ACCOUNT_ID_VARIABLE != null)
 
 ```
 
-Inside of this if statement, let's start adding the styling in a head tag and store this in an x variable. This could be named anything. :
+Inside of this if statement, let's start adding the styling in a head tag and store this in a variable called 'x' :
 
 ```
 if(input.ACCOUNT_ID_VARIABLE != null)
 {
-	//if you want to style the whole table at once, start with this and append the start of the table to this first x
+	//style the table
 	//
 	x = "<head><style> td { text-align: center;  padding: 12px 15px; }th {background: #313949; color:#CAC7C3; text-align:center; padding: 7px 5px;}button{color:white; padding: 8px 7px; border-radius: 5px}.edit{background-color: #313949;}.delete{background-color:red }table{width: 100%; margin: 0 auto; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); border-collapse: collapse; background-color: white;} tbody tr:nth-of-type(even){background-color:#f3f3f3;} tbody tr{border-bottom: 1px solid #dddddd;} tbody tr.active-row{font-weight: bold;color: #009879;}.edit a{color:white}</style></head>";
 	...
