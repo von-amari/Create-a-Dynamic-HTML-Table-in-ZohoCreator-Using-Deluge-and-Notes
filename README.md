@@ -7,18 +7,14 @@ An HTML table can be a helpful way to show an external user with no access to th
 
 ## Set Up
 Prior knowledge of HTML, CSS, and Deluge will be helpful. For this example, we will show a list of all related contacts for an Account Record. 
-We will set up the following:
+You will need to set up the following:
 
 * A Zoho Creator form with:
   * a note field
   * an Account ID field
-* User input workflow to initalize the table
-
-You will need to have in place:
-
 * CRM oauth connection in Creator
 
-
+Next, set up a workflow on User Input of Account ID, where when the Account ID is not null, show the table. 
 
 
 ```
