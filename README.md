@@ -7,9 +7,9 @@ In a Zoho Creator application, an HTML table is a helpful way to display a list,
 <p><em>Contact infomation in the snippet was randomly generated and is NOT real contact information</em></p>
 
 ## How it Works
-Adding a table to a Creator form is done through a Note field in the form. In a workflow, a variable is created to contain the HTML and CSS syntax and will be appended to throughout. Records are appended to the variable as rows in the table using a for each loop. Once the rows are added and HTML tags are closed, the Note field will then be set to equal the variable. 
+Adding a table to a Creator form is done through a Note field in the form. In a workflow, a variable is created to contain the HTML and CSS syntax and will be appended to throughout. Records are appended to the variable as rows in the table using a for each loop. Once all rows are added and the HTML tags are closed, the Note field will then be set to equal the variable. 
 
-In order to use HTML in Deluge, the HTML and CSS syntax must be enclosed with quotation marks. 
+In order to use HTML/CSS in Deluge, the HTML and CSS syntax must be enclosed with quotation marks. 
 
 
 ## Set Up
