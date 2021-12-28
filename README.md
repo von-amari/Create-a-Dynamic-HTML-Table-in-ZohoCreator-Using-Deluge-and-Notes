@@ -2,7 +2,9 @@
 
 An HTML table can be a helpful way to show external users with limited or no access to the connected CRM a list of related records to a parent record. These records could be a list of appointments, inventory, or household members related to a main Account record. Clickable links and buttons can be added in the table rows to access particular information about each record. 
 
+
 <img src="table.jpg">
+<p>Names and infomation were randomly generated and are NOT real contact information</p>
 
 ## How it Works
 Adding a table to a Creator form is done through a Note field. In a workflow, a variable is created to contain the HTML and CSS syntax and will be appended to throughout. A list of records are appended to the variable as rows in the table using a for each loop. Once the rows are added and HTML tags are closed, the Note field will then be set to equal the variable. 
