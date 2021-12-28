@@ -17,7 +17,7 @@ Prior knowledge of HTML, CSS, and Deluge will be helpful. For this example, we w
 You will need to set up the following:
 
 * A Zoho Creator form with:
-  * a note field
+  * a blank note field
   * an Account ID field
 * CRM oauth connection in Creator 
 
@@ -56,7 +56,7 @@ Append your table and table header tags to the 'x' variable. My table headers wi
 
 ```
 
-Store the list you want to use in a list variable, then iterate through the list with a for each loop, getting the pieces of information you need for each record. In this example, I want to get the first and last name, email and phone number. I have omitted the null and empty checks for brevity, but you may want to add these in case you do not have complete data coming from your CRM.
+Store the list you want to use in a list variable, then iterate through the list with a for each loop, getting the pieces of information you need for each record. In this example, I want to get the first and last name, email and phone number. I have omitted the null and empty checks for brevity, but you may want to add these in case you do not have complete data coming from your CRM. Concatenate the deluge variable with the HTML/CSS syntax, using opening and closing quotations as needed. 
 
 ```
 ...
@@ -72,11 +72,12 @@ Store the list you want to use in a list variable, then iterate through the list
 		//
 		//adds the current iteration's contact name, phone and email to the table row. Append the 'x' variable so it's storing the contact info each time. Clicking the email will open your email client. 
 		//
-		x = x + "<tr><td>" + firstName + " " + lastName + "</a></td><td>" + phone + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+		x = x + "<tr><td>" + firstName + " " + lastName + "</td><td>" + phone + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
 	}
 ...
 
 ```
+
 Append the closing table tags to the 'x' variable, then set the Note field to equal 'x'.
 
 ```
