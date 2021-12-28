@@ -21,7 +21,7 @@ You will need to set up the following:
   * an Account ID field
 * CRM oauth connection in Creator 
 
-Next, create a workflow on the user input of the Account ID field, and add a new action. Let's begin with writing an if statement on the condition that the Account ID is not null.
+Create a workflow on the user input of the Account ID field, and add a new action. Let's begin with writing an if statement on the condition that the Account ID is not null.
 
 
 ```
