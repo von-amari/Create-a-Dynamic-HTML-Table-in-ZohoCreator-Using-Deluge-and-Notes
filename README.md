@@ -87,5 +87,5 @@ x = x + "</tbody></table>";
 //set the blank note to equal x
 input.YOUR_NOTE_VARIABLE= x;
 }
-//end of the if statement if Account_ID == null
+//end of if statement Account_ID == null
 ```
