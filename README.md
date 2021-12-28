@@ -1,6 +1,6 @@
 # Create an HTML Table in Zoho Creator Using Deluge and Notes
 
-In a Zoho Creator application, an HTML table can be a helpful way to show external users a list, such as appointments, inventory, or household members related to a main parent record. Clickable links and buttons can be added in the table rows to access particular information about each record. 
+In a Zoho Creator application, an HTML table can be a helpful way to show external users a list, such as appointments, inventory, or contacts related to a main parent record. Clickable links and buttons can be added in the table rows to access particular information about each record. 
 
 
 <img src="html_table.png" width="400">
