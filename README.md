@@ -45,7 +45,7 @@ if(input.ACCOUNT_ID != null)
 
 <em>Note: Inline styling can be used.</em>
 
-Append your table and table header tags to the 'x' variable. I would like my table headers to read "Name", "Phone", and "Email". 
+Append your table and table header tags to the 'x' variable. My table headers will read "Name", "Phone", and "Email". 
 
 
 ```
