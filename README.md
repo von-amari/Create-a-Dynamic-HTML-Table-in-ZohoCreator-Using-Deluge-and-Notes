@@ -38,7 +38,6 @@ Inside of this if statement, let's begin adding the table styling in an HTML hea
 if(input.ACCOUNT_ID != null)
 {
 	//style the table
-	//
 	x = "<head><style> td { text-align: center;  padding: 12px 15px; }th {background: #313949; color:#CAC7C3; text-align:center; padding: 7px 5px;}button{color:white; padding: 8px 7px; border-radius: 5px}.edit{background-color: #313949;}.delete{background-color:red }table{width: 100%; margin: 0 auto; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); border-collapse: collapse; background-color: white;} tbody tr:nth-of-type(even){background-color:#f3f3f3;} tbody tr{border-bottom: 1px solid #dddddd;} tbody tr.active-row{font-weight: bold;color: #009879;}.edit a{color:white}</style></head>";
 	...
 
@@ -53,7 +52,6 @@ Append your table and table header tags to the 'x' variable. I would like my tab
 ...
 	//start the table and add the headers
 	x = x + "<table><thead><tr><th>Name</th><th>Phone</th><th>Email</th> </tr> </thead><tbody>";
-	//
 ...	
 
 ```
@@ -62,7 +60,7 @@ Get the related list that you want to use and store this into a list variable, t
 
 ```
 ...
-//iterate through all contacts for a particular account record
+	//iterate through all contacts for a particular account record
 	getRelatedContacts = zoho.crm.getRelatedRecords("Contacts","Accounts",input.Account_ID);
 	for each contact in getRelatedContacts
 	{
