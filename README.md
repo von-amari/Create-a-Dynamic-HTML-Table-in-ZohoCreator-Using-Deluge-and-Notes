@@ -3,7 +3,7 @@
 An HTML table can be a helpful way to show external users with limited or no access to the connected CRM a list of related records to a parent record. These records could be a list of appointments, inventory, or household members related to a main Account record. Clickable links and buttons can be added in the table rows to access particular information about each record. 
 
 
-<img src="html_table.png" width="200">
+<img src="html_table.png" width="400">
 <p>Names and infomation were randomly generated and are NOT real contact information</p>
 
 ## How it Works
