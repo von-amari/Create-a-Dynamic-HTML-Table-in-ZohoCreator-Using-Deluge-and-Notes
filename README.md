@@ -77,17 +77,14 @@ Get the related list that you want to use and store this into a list variable, t
 ...
 
 ```
-Append the closing table tags and 
+Append the closing table tags to the 'x' variable, then set the Note field to equal 'x'.
 
 ```
 ...
 //close the table tags
 	x = x + "</tbody></table>";
-	//make the notes =  to x where we have been storing the table 
-	//input.plain = x;
-	//this is the blank note I created
+//set the blank note to equal x
 	input.YOUR_NOTE_VARIABLE= x;
-	show YOUR_NOTE_VARIABLE;
 }
 //end of the if statement if Account_ID == null
 ```
