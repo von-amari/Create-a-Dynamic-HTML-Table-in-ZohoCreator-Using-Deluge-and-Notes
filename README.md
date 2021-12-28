@@ -56,7 +56,7 @@ Append your table and table header tags to the 'x' variable. I would like my tab
 
 ```
 
-Get the related list that you want to use and store this into a list variable, then iterate through the list with a for each loop, getting the pieces of information you need for each contact. In this example, I want to get the first and last name, email and phone number. I have omitted the null and empty checks for brevety, but you may want to add these in case you do not have complete data coming from your CRM.
+Get the related list that you want to use and store this into a list variable, then iterate through the list with a for each loop, getting the pieces of information you need for each contact. In this example, I want to get the first and last name, email and phone number. I have omitted the null and empty checks for brevity, but you may want to add these in case you do not have complete data coming from your CRM.
 
 ```
 ...
@@ -65,14 +65,14 @@ Get the related list that you want to use and store this into a list variable, t
 	for each contact in getRelatedContacts
 	{
 		getRecord = zoho.crm.getRecordById("Contacts",contact.get("id").toLong());
-		getFirstName = getRec.get("First_Name");
-		getLastName = getRec.get("Last_Name");
-		phone = getRec.get("Phone");
-		email = getRec.get("Email");
+		firstName = getRecord.get("First_Name");
+		lastName = getRecord.get("Last_Name");
+		phone = getRecord.get("Phone");
+		email = getRecordc.get("Email");
 		//
 		//adds the current iteration's contact name, phone and email to the table row. Append the x variable so it's storing the contact info each time. Clicking the email will open your email client. 
 		//
-		x = x + "<tr><td>" + getFirstName + " " + getLastName + "</a></td><td>" + phone + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+		x = x + "<tr><td>" + firstName + " " + lastName + "</a></td><td>" + phone + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
 	}
 ...
 
@@ -82,9 +82,9 @@ Append the closing table tags to the 'x' variable, then set the Note field to eq
 ```
 ...
 //close the table tags
-	x = x + "</tbody></table>";
+x = x + "</tbody></table>";
 //set the blank note to equal x
-	input.YOUR_NOTE_VARIABLE= x;
+input.YOUR_NOTE_VARIABLE= x;
 }
 //end of the if statement if Account_ID == null
 ```
