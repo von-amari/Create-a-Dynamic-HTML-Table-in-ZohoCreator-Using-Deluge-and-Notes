@@ -52,7 +52,7 @@ Append your table and table header tags to the 'x' variable. I am wanting to hav
 ```
 ...
 	//start the table and add the headers
-	x = x + "<table><thead><tr><th></th><th></th><th>Name</th><th>Phone</th><th>Email</th> </tr> </thead><tbody>";
+	x = x + "<table><thead><tr><th>Name</th><th>Phone</th><th>Email</th> </tr> </thead><tbody>";
 	//
 ...	
 
@@ -64,17 +64,17 @@ Get the related list that you want to use and store this into a list variable, t
 ...
 //iterate through all contacts for a particular account record
 	getRelatedContacts = zoho.crm.getRelatedRecords("Contacts","Accounts",input.Account_ID);
-	for each  contact in getRelatedContacts
+	for each contact in getRelatedContacts
 	{
-		getRec = zoho.crm.getRecordById("Contacts",contact.get("id").toLong());
-		getFName = getRec.get("First_Name");
-		getLName = getRec.get("Last_Name");
-		ph = getRec.get("Phone");
+		getRecord = zoho.crm.getRecordById("Contacts",contact.get("id").toLong());
+		getFirstName = getRec.get("First_Name");
+		getLastName = getRec.get("Last_Name");
+		phone = getRec.get("Phone");
 		email = getRec.get("Email");
 		//
-		//adds the current iteration's contact name, phone and email to the table row. append the x variable so it's storing it each time. Click delete will delete record, edit will naviate to crm to make changes, email will open email client. 
+		//adds the current iteration's contact name, phone and email to the table row. Append the x variable so it's storing the contact info each time. Clicking the email will open your email client. 
 		//
-		x = x + "<tr><td><button class='delete'><a href='YOUR_DELETION_FORM_CONFIRMATION_URL?Account_ID=" + input.Account_ID + "&Contact_ID=" + contact.get("id") + "'>Delete</a></button></td><td><button class='edit'><a href='YOUR_EDIT_CONTACT_FORM_URL?Account_ID=" +input.Account_ID + "&Contact_ID=" + contact.get("id") + "'>Edit</a></button></td><td>" + getFName + " " + getLName + "</a></td><td>" + ph + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
+		x = x + "<tr><td>" + getFirstName + " " + getLastName + "</a></td><td>" + phone + "</td><td><a href='mailto:" + email + "'>" + email + "</a></td></tr>";
 	}
 ...
 
