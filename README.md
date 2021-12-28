@@ -21,7 +21,7 @@ You will need to set up the following:
   * an Account ID field
 * CRM oauth connection in Creator 
 
-Next, set up a workflow on the user input of the Account ID field. Let's begin with an if statement on the condition that the Account ID is not null.
+Next, create a workflow on the user input of the Account ID field, and add a new action. Let's begin with writing an if statement on the condition that the Account ID is not null.
 
 
 ```
@@ -43,7 +43,7 @@ if(input.ACCOUNT_ID != null)
 
 ```
 
-Note: Inline styling can be used.
+<em>Note: Inline styling can be used.</em>
 
 Append your table and table header tags to the 'x' variable. I would like my table headers to read "Name", "Phone", and "Email". 
 
